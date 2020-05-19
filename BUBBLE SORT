@@ -1,0 +1,26 @@
+# REAL TIME EXAMPLE OF BUBBLE SORT:
+  
+''' Now lets take the height of students in school, we always prefereed to stand in height order in our school days,
+similarly bubble sort is something that compares the height by first two ie; [0,1] heights and then the next heights ie;[1,2] and so on '''
+
+# SOURCE CODE:
+
+def bubbleSort(swapNums):
+    has_swaped=True           
+    while has_swaped:
+        has_swaped=False
+        for i in range(len(swapNums)-1):
+            if swapNums[i] > swapNums[i+1]:
+                swapNums[i],swapNums[i+1] = swapNums[i+1],swapNums[i]
+                has_swaped=True
+
+numbers=[3333,111,-9,-1,6,1,2]
+bubbleSort(numbers)
+print(numbers)     
+
+''' When no swaps are made, that means that the list is sorted. so here it'll keep evaluating the rest of the list even though it really
+doesn't need to. To fix this, we'll keep a boolean flag (in line 9,11,15) and check if any swaps were made in the previous iteration '''
+
+OUTPUT:
+[-9, -1, 1, 2, 6, 111, 3333]
+      
